@@ -13,6 +13,10 @@ html {
     /*Dropdown*/
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+
+    /*Top menu*/
+    --top-menu-border-color: #d2d1d6;
+    
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;
