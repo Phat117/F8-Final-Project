@@ -6,7 +6,11 @@
 
     @include abstract.breakpoint(lg) {
         column-gap: 10px;
-        margin-left: 39px;
+        margin-left: 40px;
+    }
+
+    @include abstract.breakpoint(sm) {
+        margin-left: 0px;
     }
 
     &__title {
