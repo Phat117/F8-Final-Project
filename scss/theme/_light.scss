@@ -16,9 +16,13 @@ html {
 
     /*Top menu*/
     --top-menu-border-color: #d2d1d6;
-    
+
+    /* Menu column */
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
+        saturate(4606%) hue-rotate(214deg) brightness(95%) contrast(95%);
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 }
