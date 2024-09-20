@@ -8,10 +8,10 @@
     opacity: 0;
     visibility: hidden;
     transition: all ease 0.5s;
+
     @include abstract.breakpoint(lg) {
+        display: none;
         position: initial;
-        opacity: 1;
-        visibility: visible;
         padding-top: 0;
     }
 
