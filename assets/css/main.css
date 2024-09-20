@@ -1296,8 +1296,8 @@ select {
 }
 html {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
-      saturate(4606%) hue-rotate(214deg) brightness(95%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4606%) hue-rotate(214deg) brightness(95%)
+      contrast(95%);
   --body-bg-color: #f6f6f6;
   --header-bg-color: #eeeeee;
   --top-act-group-bg-color: #fff;
@@ -1309,8 +1309,11 @@ html {
   /*Top menu*/
   --top-menu-border-color: #d2d1d6;
   /* Menu column */
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
-      saturate(4606%) hue-rotate(214deg) brightness(95%) contrast(95%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4606%) hue-rotate(214deg)
+      brightness(95%) contrast(95%);
+  /*Side Bar*/
+  --sidebar-bg-color: #fff;
+  --sidebar-shadow: box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.40);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1322,8 +1325,8 @@ html {
 
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
-      saturate(0%) hue-rotate(228deg) brightness(107%) contrast(101%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(228deg) brightness(107%)
+      contrast(101%);
   --body-bg-color: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
@@ -1332,14 +1335,16 @@ html.dark {
   /*Dropdown*/
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(12%)
-      saturate(1053%) hue-rotate(185deg) brightness(90%) contrast(89%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(12%) saturate(1053%) hue-rotate(185deg)
+      brightness(90%) contrast(89%);
   /*Top menu*/
   --top-menu-border-color: #171c28;
   /* Menu column */
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
-      sepia(0%) saturate(7111%) hue-rotate(261deg) brightness(96%)
-      contrast(103%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7111%) hue-rotate(261deg)
+      brightness(96%) contrast(103%);
+  /*Side Bar*/
+  --sidebar-bg-color: #292e39;
+  --sidebar-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1391,8 +1396,10 @@ html.dark {
     margin-left: 0px;
     padding: 20px 0;
     inset: 0 50% 0 0;
-    background: #fff;
+    background: var(--sidebar-bg-color);
+    box-shadow: var(--sidebar-shadow);
     z-index: 9;
+    border-radius: 0px 20px 20px 0px;
     transform: translateX(-100%);
     transition: transform 0.5s;
   }
@@ -1404,6 +1411,11 @@ html.dark {
     visibility: visible;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
+  }
+}
 .navbar__close-btn {
   display: none;
 }
@@ -1411,6 +1423,11 @@ html.dark {
   .navbar__close-btn {
     display: block;
     padding: 10px 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__close-btn {
+    padding: 5px 20px 10px;
   }
 }
 .navbar__overlay {
@@ -1431,7 +1448,17 @@ html.dark {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 26px);
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 140px);
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__list {
+    height: calc(100% - 124px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1464,6 +1491,12 @@ html.dark {
     padding: 0 40px;
     font-size: 1.6rem;
     line-height: 150%;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__link {
+    padding: 0 20px;
+    height: 44px;
   }
 }
 .navbar__arrow {
@@ -1526,6 +1559,30 @@ html.dark {
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.nav-btn {
+  height: 50px;
+  align-items: center;
+  padding: 0 40px;
+}
+.nav-btn__title, .nav-btn__qtn {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.nav-btn__title, .nav-btn__qtn {
+  margin-left: 16px;
+}
+.nav-btn__qtn {
+  margin-left: auto;
+}
+@media (max-width: 575.98px) {
+  .nav-btn {
+    padding: 0 20px;
+    height: 44px;
+  }
 }
 
 .logo {
