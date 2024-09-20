@@ -160,5 +160,9 @@
         display: flex;
         column-gap: 77px;
         height: var(--max-inner-height);
+
+        @include abstract.breakpoint(lg) {
+            height: auto;
+        }
     }
 }
