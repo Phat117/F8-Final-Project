@@ -1,7 +1,6 @@
 @use "../abstract";
 .slideshow {
     position: relative;
-    margin: 40px 0;
     z-index: 2;
     &__inner {
         overflow: hidden;
