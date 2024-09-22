@@ -43,6 +43,10 @@
                 content: none;
             }
         }
+
+        @include abstract.breakpoint(sm) {
+            padding: 0 40px;
+        }
     }
 }
 
