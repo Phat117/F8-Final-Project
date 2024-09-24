@@ -29,6 +29,16 @@ html {
     --care-item-bg: #eee;
     --cate-item-thumb-bg: #fff;
     --cate-item-title-color: #000;
+
+    /*Buttons*/
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+    /*Product-item*/
+    --product-item-bg-color: #fff;
+    --product-item-shadow: rgba(237, 237, 246, 0.2);
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;

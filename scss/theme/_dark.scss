@@ -31,6 +31,16 @@ html.dark {
     --care-item-bg: #171c28;
     --cate-item-thumb-bg: #292e39;
     --cate-item-title-color: #fff;
+
+    /*Buttons*/
+    --filter-btn-color: #fff;
+    --filter-btn-bg-color: #171c28;
+
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+    /*Product-item*/
+    --product-item-bg-color: #171c28;
+    --product-item-shadow: rgba(124, 124, 124, 0.2);
     @include abstract.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
