@@ -170,9 +170,12 @@ button,
 input,
 textarea,
 select {
+  padding: 0;
   font-family: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
 }
 
 .icon {
@@ -2147,14 +2150,34 @@ html.dark {
 .filter__form-slider::after {
   left: 70%;
 }
-.filter__form-input {
-  width: 121px;
-  padding: 8px 12px;
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  width: 334px;
+  padding: 10px 16px;
   border-radius: 6px;
   border: 1px solid #d2d1d6;
+  overflow: hidden;
+}
+.filter__form-text-input--small {
+  width: 121px;
+  padding: 8px 12px;
+}
+.filter__form-text-input .filter__form-input {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 142.857%;
+}
+.filter__form-input {
+  width: 100%;
+  margin-right: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
 }
 .filter__form-select-wrap {
   display: flex;

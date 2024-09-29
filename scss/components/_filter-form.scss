@@ -79,15 +79,38 @@
             }
         }
 
-        &-input {
-            width: 121px;
-            padding: 8px 12px;
+        &-text-input {
+            display: flex;
+            align-items: center;
+
+            width: 334px;
+            padding: 10px 16px;
+
             border-radius: 6px;
             border: 1px solid #d2d1d6;
+            overflow: hidden;
 
+            &--small {
+                width: 121px;
+                padding: 8px 12px;
+            }
+        }
+        &-text-input &-input {
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142.857%;
+        }
+        &-input {
+            width: 100%;
+            margin-right: 8px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            &::placeholder {
+                color: #9e9da8;
+                font-weight: 400;
+            }
         }
         &-select-wrap {
             display: flex;
