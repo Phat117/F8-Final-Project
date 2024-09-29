@@ -44,6 +44,8 @@ html {
     --filter-form-bg-color: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-form-tag-bg-color: #f8f8fb;
+    --filter-form-footer-color: #fff;
+
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;
