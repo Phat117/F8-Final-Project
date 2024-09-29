@@ -44,6 +44,7 @@ html.dark {
 
     /*Filter Form*/
     --filter-form-bg-color: #292e39;
+    --filter-form-tag-bg-color: #171c28;
     @include abstract.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
