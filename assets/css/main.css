@@ -1673,6 +1673,7 @@ html.dark {
 .dropdown {
   position: absolute;
   left: 0;
+  z-index: 3;
   padding-top: 54px;
   width: min(1240px, 100%);
   opacity: 0;
@@ -2126,7 +2127,7 @@ html.dark {
 .filter {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 60px;
   padding: 30px;
   border-radius: 20px;
   background-color: var(--filter-form-bg-color);
@@ -2265,6 +2266,30 @@ html.dark {
   width: 1px;
   background-color: #eee;
   margin: 0 30px;
+}
+.filter__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+.filter__cancel, .filter__result {
+  height: 38px;
+  padding: 0 10px;
+}
+.filter__cancel {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.filter__result {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__arrow {
+  position: absolute;
+  top: -4%;
+  right: 3%;
 }
 
 .home__container {
