@@ -39,6 +39,10 @@ html {
     /*Product-item*/
     --product-item-bg-color: #fff;
     --product-item-shadow: rgba(237, 237, 246, 0.2);
+
+    /*Filter Form*/
+    --filter-form-bg-color: #fff;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;

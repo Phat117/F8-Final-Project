@@ -41,6 +41,9 @@ html.dark {
     /*Product-item*/
     --product-item-bg-color: #171c28;
     --product-item-shadow: rgba(124, 124, 124, 0.2);
+
+    /*Filter Form*/
+    --filter-form-bg-color: #292e39;
     @include abstract.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
