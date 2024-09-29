@@ -2034,6 +2034,42 @@ html.dark {
   margin-top: 10px;
 }
 
+/*Buttons*/
+.btn {
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background-color: #f8f8fb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  -webkit-user-select: none;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+.btn--text {
+  color: #9e9da8;
+  background-color: transparent;
+  font-weight: 400;
+}
+.btn--primary {
+  background-color: #ffb700;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid #d2d1d6;
+}
+.btn--rounded {
+  border-radius: 999px;
+}
+.btn[disabled], .btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
 .product-item {
   padding: 16px;
   border-radius: 20px;
