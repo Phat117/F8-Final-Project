@@ -1,0 +1,136 @@
+@use "../abstract";
+
+.footer {
+    margin: 30px auto 0;
+    background-color: var(--footer-bg-color);
+    &__inner {
+        padding: 30px 0;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        & + & {
+            margin-top: 50px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 145.455%;
+        color: var(--footer-text-heading);
+    }
+    &__item {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--footer-item-text-color);
+        & + & {
+            margin-top: 6px;
+        }
+
+        &--contact {
+            margin-top: 35px;
+        }
+        &--contact + &--contact {
+            margin-top: 25px;
+        }
+    }
+    &__link {
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--footer-text-color);
+
+        &:hover {
+            color: var(--footer-text-color--change);
+            text-decoration: underline;
+        }
+    }
+
+    &__separate {
+        margin: 40px 0;
+        width: 100%;
+        background: red;
+        height: 2px;
+    }
+    &__info {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        color: var(footer-desc-color);
+        margin-top: 16px;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__btn {
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 20px auto 0;
+        padding: 30px 70px;
+
+        text-align: center;
+        font-size: 2.1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 141.667%;
+        color: #fff;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &__wrap {
+        a {
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: red;
+        cursor: pointer;
+    }
+
+    &__form {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        padding: 10px 16px;
+        width: 334px;
+        border-radius: 6px;
+        border: 1px solid #fff;
+        overflow: hidden;
+        background-color: rgb(219, 217, 217);
+    }
+
+    &__input {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+}
