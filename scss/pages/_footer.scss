@@ -14,6 +14,39 @@
         & + & {
             margin-top: 50px;
         }
+
+        &--top {
+            @include abstract.breakpoint(xl) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            @include abstract.breakpoint(sm) {
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 15px;
+                text-align: center;
+            }
+        }
+
+        &--bottom {
+            @include abstract.breakpoint(lg) {
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+    }
+
+    &__col {
+        &--contact {
+            @include abstract.breakpoint(xl) {
+                grid-column: span 4;
+                text-align: center;
+                margin-top: 25px;
+            }
+            @include abstract.breakpoint(sm) {
+                grid-column: initial;
+            }
+        }
     }
 
     &__title {
@@ -23,6 +56,12 @@
         font-weight: 700;
         line-height: 145.455%;
         color: var(--footer-text-heading);
+        @include abstract.breakpoint(lg) {
+            font-size: 2rem;
+        }
+        @include abstract.breakpoint(md) {
+            font-size: 1.7rem;
+        }
     }
     &__item {
         font-size: 1.6rem;
@@ -35,6 +74,9 @@
 
         &--contact {
             margin-top: 35px;
+            @include abstract.breakpoint(lg) {
+                margin-top: 20px;
+            }
         }
         &--contact + &--contact {
             margin-top: 25px;
@@ -49,6 +91,14 @@
         &:hover {
             color: var(--footer-text-color--change);
             text-decoration: underline;
+        }
+
+        @include abstract.breakpoint(lg) {
+            font-size: 1.5rem;
+        }
+
+        @include abstract.breakpoint(md) {
+            font-size: 1.3rem;
         }
     }
 
@@ -121,7 +171,7 @@
         display: flex;
         align-items: center;
         padding: 10px 16px;
-        width: 334px;
+        max-width: 334px;
         border-radius: 6px;
         border: 1px solid #fff;
         overflow: hidden;
