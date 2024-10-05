@@ -53,6 +53,9 @@ html {
     --footer-text-color: #0928ff;
     --footer-text-color--change: #fff;
     --footer-desc-color: #9e9da8;
+
+    // auth
+    --auth-content-bg-color: #fff;
     @include abstract.breakpoint(lg) {
         --header-bg-color: #fff;
         --body-bg-color: #f6f6f6;
