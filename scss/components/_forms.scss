@@ -1,4 +1,8 @@
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none; // deo cho bam
+    }
     &__group {
         margin-top: 30px;
         &--inline {
@@ -7,6 +11,24 @@
             width: 100%;
         }
     }
+
+    // Validation
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)):has(&__input:not(:focus-within)) {
+        .form__text-input {
+            border-color: red;
+            background-color: rgba($color: red, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__input-icon--error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+    }
+
     &__text-input {
         display: flex;
         align-items: center;
@@ -36,7 +58,22 @@
 
         &-icon {
             margin-left: 12px;
+            &--error {
+                margin-left: 12px;
+                display: none;
+                width: 5%;
+                animation: shake 0.8s;
+            }
         }
+    }
+
+    &__error {
+        display: none;
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color: red;
     }
 
     &__pull-right {
@@ -45,7 +82,7 @@
 
     &__checkbox {
         position: relative;
-
+        user-select: none;
         &-label {
             padding-left: 30px;
 
@@ -80,7 +117,8 @@
         }
 
         & [type="checkbox"]:checked + &-label::before {
-            background-color: blue;
+            background-color: #ffb700;
+            border-color: #ffb700;
         }
 
         & [type="checkbox"]:checked + &-label::after {
@@ -89,8 +127,8 @@
             top: 1px;
             left: 4px;
 
-            border-bottom: 3px solid red;
-            border-right: 3px solid red;
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff;
             rotate: 45deg;
         }
     }

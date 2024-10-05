@@ -206,6 +206,14 @@
         object-fit: cover;
         cursor: pointer;
     }
+
+    &__sign-up {
+        @include abstract.breakpoint(md) {
+            height: 40px !important;
+            padding: 0 10px !important;
+            font-size: 1.6rem !important;
+        }
+    }
 }
 
 .nav-btn {
