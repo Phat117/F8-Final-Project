@@ -12,11 +12,7 @@
         flex: 1;
         padding: 0 30px;
     }
-    &__content {
-        &-inner {
-            padding: 50px 0;
-        }
-    }
+
     &__intro {
         position: relative;
         display: flex;
@@ -24,6 +20,7 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        background-color: var(--auth-intro-bg);
 
         &-text {
             max-width: 412px;
@@ -33,6 +30,7 @@
             line-height: 144.444%;
 
             text-align: center;
+            color: var(--auth-intro-text-color);
 
             @include abstract.breakpoint(md) {
                 font-size: 1.5rem;
@@ -82,6 +80,12 @@
 
             margin: 0 auto;
             width: min(460px, 100%);
+
+            padding: 50px 0;
+
+            @include abstract.breakpoint(md) {
+                padding: 32px 0;
+            }
         }
     }
 
@@ -92,15 +96,17 @@
         font-style: normal;
         font-weight: 500;
         line-height: 146.667%;
-
+        color: var(--auth-heading);
         @include abstract.breakpoint(md) {
+            margin-top: 40px;
+
             font-size: 2.2rem;
         }
     }
 
     &__desc {
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
 
         font-size: 1.5rem;
         font-style: normal;
@@ -139,6 +145,11 @@
         gap: 30px;
 
         margin-top: 50px;
+
+        @include abstract.breakpoint(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
 
     &__btn {
@@ -153,7 +164,7 @@
         line-height: 144.444%;
         color: #9e9da8;
         @include abstract.breakpoint(md) {
-            margin-top: 56px;
+            margin-top: 40px;
             font-size: 1.6rem;
         }
         &-link {
