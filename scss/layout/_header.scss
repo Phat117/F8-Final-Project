@@ -25,6 +25,34 @@
         padding: 16px 0;
         justify-content: space-between;
     }
+
+    &__logo {
+        @include abstract.breakpoint(lg) {
+            column-gap: 10px !important;
+            margin-left: 40px;
+        }
+
+        @include abstract.breakpoint(md) {
+            margin-left: 0px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        &-title {
+            @include abstract.breakpoint(lg) {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        &-img {
+            @include abstract.breakpoint(lg) {
+                width: 24px;
+            }
+        }
+    }
 }
 
 .navbar {

@@ -1,3 +1,7 @@
+@use "../abstract";
+
+$error-color: #ed4337;
+
 .form {
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
@@ -15,8 +19,8 @@
     // Validation
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)):has(&__input:not(:focus-within)) {
         .form__text-input {
-            border-color: red;
-            background-color: rgba($color: red, $alpha: 0.1);
+            border-color: $error-color;
+            background-color: rgba($color: $error-color, $alpha: 0.1);
         }
 
         .form__error,
@@ -25,7 +29,7 @@
         }
 
         .form__input-icon {
-            display: none;
+            isplay: none;
         }
     }
 
@@ -41,6 +45,10 @@
 
         &:focus-within {
             border-color: #77dae6;
+        }
+
+        @include abstract.breakpoint(md) {
+            height: 48px;
         }
     }
     &__input {
@@ -65,6 +73,10 @@
                 animation: shake 0.8s;
             }
         }
+
+        @include abstract.breakpoint(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__error {
@@ -73,7 +85,7 @@
         font-size: 1.4rem;
         font-weight: 500;
         margin-top: 10px;
-        color: red;
+        color: $error-color;
     }
 
     &__pull-right {
@@ -113,6 +125,10 @@
                 height: 18.5px;
                 border-radius: 6px;
                 border: 1.5px solid #9e9da8;
+            }
+
+            @include abstract.breakpoint(md) {
+                font-size: 1.4rem;
             }
         }
 
