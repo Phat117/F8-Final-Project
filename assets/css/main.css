@@ -2912,6 +2912,9 @@ html.dark {
 .auth__form--forgot {
   margin-top: 10px;
 }
+.auth__form--new-password {
+  margin-top: 10px;
+}
 .auth__link {
   font-size: 1.5rem;
   font-style: normal;
