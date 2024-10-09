@@ -1,0 +1,15 @@
+@use "../abstract";
+
+.message {
+    padding: 15px 15px;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+
+    &--success {
+        background: rgb(17 255 108 / 30%);
+        border: 1.5px solid #46a05c;
+    }
+}

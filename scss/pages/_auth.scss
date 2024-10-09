@@ -38,6 +38,7 @@
         }
 
         &-img {
+            width: var(--width);
             max-width: 100%;
         }
 
@@ -125,6 +126,9 @@
         @include abstract.breakpoint(md) {
             margin-top: 30px;
         }
+        &--forgot {
+            margin-top: 10px;
+        }
     }
 
     &__link {
@@ -170,5 +174,8 @@
         &-link {
             font-size: inherit;
         }
+    }
+    &__message {
+        margin-top: 30px;
     }
 }
