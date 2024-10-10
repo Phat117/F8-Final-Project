@@ -38,21 +38,6 @@
     &__form {
         margin-top: 30px;
 
-        &-label {
-            display: block;
-            font-size: 2.2rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 145.455%;
-
-            &--small {
-                margin-bottom: 10px;
-                font-size: 1.4rem;
-                font-style: normal;
-                line-height: 142.857%;
-            }
-        }
-
         &-group {
             margin-top: 20px;
 
@@ -136,61 +121,6 @@
 
             @include abstract.breakpoint(sm) {
                 font-size: 1.6rem;
-            }
-        }
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-
-            border-radius: 6px;
-            border: 1px solid #d2d1d6;
-        }
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            min-width: var(--width, 110px);
-            height: calc(100% - 10px);
-            padding: 0 14px;
-
-            font-size: 1.4rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 142.857%;
-            cursor: pointer;
-            @include abstract.breakpoint(xl) {
-                flex: 1;
-            }
-        }
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            column-gap: 20px;
-            row-gap: 10px;
-
-            @include abstract.breakpoint(sm) {
-                column-gap: 9px;
-            }
-        }
-        &-tag {
-            padding: 6px 12px;
-            border-radius: 6px;
-            background: var(--filter-form-tag-bg-color);
-
-            color: #9e9da8;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            transition: color 0.2s;
-            &:hover {
-                color: var(--text-color);
             }
         }
     }
