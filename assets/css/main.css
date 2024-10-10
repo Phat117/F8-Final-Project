@@ -1373,6 +1373,9 @@ html {
   --footer-desc-color: #9e9da8;
   --form-placeholder-color: #d2d1d6;
   --auth-content-bg-color: #fff;
+  --product-page-bg-color: #fff;
+  --breadcrumbs-bg-color: #f6f6f6;
+  --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 767.98px) {
   html {
@@ -1437,6 +1440,9 @@ html.dark {
   --auth-intro-bg: #171c28;
   --auth-intro-text-color: #b9babe;
   --auth-heading: #b9babe;
+  --product-page-bg-color: #292e39;
+  --breadcrumbs-bg-color: #171c28;
+  --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2579,6 +2585,41 @@ html.dark {
   border: 1.5px solid #46a05c;
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--breadcrumbs-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow-color);
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs {
+    gap: 16px;
+  }
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9e9da8;
+  white-space: nowrap;
+}
+.breadcrumbs__link--current {
+  color: inherit;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+  }
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2959,6 +3000,17 @@ html.dark {
   font-size: inherit;
 }
 .auth__message {
+  margin-top: 30px;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--product-page-bg-color);
+  min-height: 80vh;
+}
+
+.product-container {
   margin-top: 30px;
 }
 

@@ -1,0 +1,40 @@
+@use "../abstract";
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 20px;
+
+    border-radius: 10px;
+    background: var(--breadcrumbs-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow-color);
+
+    @include abstract.breakpoint(md) {
+        gap: 16px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        color: #9e9da8;
+
+        white-space: nowrap;
+
+        &--current {
+            color: inherit;
+        }
+
+        @include abstract.breakpoint(md) {
+            font-size: 1.4rem;
+        }
+    }
+}

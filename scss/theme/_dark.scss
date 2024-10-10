@@ -59,6 +59,12 @@ html.dark {
     --auth-intro-text-color: #b9babe;
     --auth-heading: #b9babe;
 
+    //Product page
+    --product-page-bg-color: #292e39;
+
+    // Breadcrumbs
+    --breadcrumbs-bg-color: #171c28;
+    --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
     @include abstract.breakpoint(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }

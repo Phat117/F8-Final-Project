@@ -60,6 +60,12 @@ html {
     // auth
     --auth-content-bg-color: #fff;
 
+    //Product page
+    --product-page-bg-color: #fff;
+
+    // Breadcrumbs
+    --breadcrumbs-bg-color: #f6f6f6;
+    --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
     @include abstract.breakpoint(md) {
         --auth-intro-bg: #fff;
     }
