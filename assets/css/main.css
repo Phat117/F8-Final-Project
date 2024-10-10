@@ -3061,4 +3061,37 @@ html.dark {
   opacity: 1;
 }
 
+.product-info {
+  padding: 60px;
+}
+.product-info__heading {
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 138.462%;
+  max-width: 639px;
+}
+
+.product-prop {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.product-prop__title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.product-prop__icon {
+  align-self: flex-start;
+}
+.product-prop__desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
 /*# sourceMappingURL=main.css.map */
