@@ -13,6 +13,10 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstract.breakpoint(md) {
+        margin-top: 20px;
+    }
 }
 
 .product-review {
@@ -94,7 +98,7 @@
 .product-info {
     padding: 60px;
     background-color: var(--product-info-bg-color);
-
+    border-radius: 10px;
     @include abstract.breakpoint(xxl) {
         padding: 35px;
     }
@@ -115,12 +119,6 @@
         font-weight: 500;
         line-height: 138.462%;
         max-width: 639px;
-
-        @include abstract.breakpoint(md) {
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 144.444%;
-        }
     }
 
     &__label {
@@ -162,9 +160,10 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.857%;
+        border-radius: 4px;
 
         color: #67b044;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+        background: rgb(103, 176, 68, 20%);
     }
 
     &__total-price {
@@ -173,8 +172,6 @@
         font-style: normal;
         font-weight: 500;
         line-height: 138.462%;
-
-        color: #000;
     }
 
     &__add-to-cart {
@@ -246,6 +243,6 @@
 .product-info-container {
     @include abstract.breakpoint(md) {
         border-radius: 20px;
-        background-color: #fff;
+        background-color: var(--product-info-container-bg-color);
     }
 }

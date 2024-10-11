@@ -9,10 +9,9 @@ html.dark {
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-separate: #ededf6;
-
-    //Footer
-    --footer-bg-color: #292828;
-    --footer-text-color: #fff;
+    @include abstract.breakpoint(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
     /*Dropdown*/
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
@@ -53,6 +52,14 @@ html.dark {
         brightness(93%) contrast(87%);
     --filter-form-footer-color: #292e39;
 
+    // Footer
+    --footer-bg-color: #292929;
+    --footer-item-text-color: #ff0000;
+    --footer-text-heading: #77dae6;
+    --footer-text-color: #fff;
+    --footer-text-color--change: #fff;
+    --footer-desc-color: #9e9da8;
+
     //form
     --form-placeholder-color: #b9babe;
 
@@ -64,11 +71,21 @@ html.dark {
 
     //Product page
     --product-page-bg-color: #292e39;
-
+    --product-info-bg-color: #171c28;
+    --product-info-tax-bg-color: #292e39;
+    --product-info-container-bg-color: #171c28;
+    @include abstract.breakpoint(md) {
+        --product-page-bg-color: #292e39;
+        --product-info-bg-color: #171c28;
+    }
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
     --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
-    @include abstract.breakpoint(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.2);
+
+    @include abstract.breakpoint(md) {
+        --breadcrumbs-bg-color: #171c28;
     }
+
+    // Search-bar
+    --search-bar-bg-color: #171c28;
 }
