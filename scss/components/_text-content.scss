@@ -66,14 +66,14 @@
     }
 
     a {
-        color: blue;
+        color: #6a6ae7;
         text-decoration: underline;
     }
 
     blockquote {
-        background-color: rgb(135 250 255 / 44%);
+        background-color: rgb(50 230 239 / 22%);
         padding: 20px;
-        border-left: 3px solid #910000;
+        border-left: 3px solid #e38d8dc4;
         p {
             margin: 0;
         }
@@ -83,6 +83,6 @@
         border: none;
         height: 1.5px;
         margin: 40px 0;
-        background-color: grey;
+        background-color: var(--text-content-hr-bg-color);
     }
 }

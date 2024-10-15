@@ -292,15 +292,19 @@
             display: block;
         }
     }
+
+    &__text-content {
+        margin-top: -20px;
+    }
 }
 
 .product-content {
     &__heading {
         margin-bottom: 30px;
 
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 141.667%;
 
         color: inherit;

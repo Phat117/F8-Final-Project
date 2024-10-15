@@ -1395,6 +1395,7 @@ html {
   --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
   --search-bar-bg-color: #fff;
   --review-card-bg-color: #fafafd;
+  --text-content-hr-bg-color: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1422,6 +1423,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --breadcrumbs-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg-color: #fff;
   }
 }
 
@@ -1483,6 +1489,8 @@ html.dark {
   --breadcrumbs-bg-color: #171c28;
   --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
   --search-bar-bg-color: #171c28;
+  --review-card-bg-color: #171c28;
+  --text-content-hr-bg-color: #414349;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2827,13 +2835,13 @@ html.dark {
   text-align: center;
 }
 .text-content a {
-  color: blue;
+  color: #6a6ae7;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background-color: rgba(135, 250, 255, 0.44);
+  background-color: rgba(50, 230, 239, 0.22);
   padding: 20px;
-  border-left: 3px solid #910000;
+  border-left: 3px solid rgba(227, 141, 141, 0.768627451);
 }
 .text-content blockquote p {
   margin: 0;
@@ -2842,7 +2850,7 @@ html.dark {
   border: none;
   height: 1.5px;
   margin: 40px 0;
-  background-color: grey;
+  background-color: var(--text-content-hr-bg-color);
 }
 
 .home {
@@ -3507,12 +3515,15 @@ html.dark {
 .product-tab__content--active {
   display: block;
 }
+.product-tab__text-content {
+  margin-top: -20px;
+}
 
 .product-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 141.667%;
   color: inherit;
 }
