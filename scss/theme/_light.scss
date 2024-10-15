@@ -74,7 +74,7 @@ html {
     --product-page-bg-color: #fff;
     --product-info-bg-color: #f6f6f6;
     --product-info-tax-bg-color: #ededf6;
-    --product-info-container-bg-color:#fff;
+    --product-info-container-bg-color: #fff;
     @include abstract.breakpoint(md) {
         --product-page-bg-color: #fafafd;
         --product-info-bg-color: #fff;
@@ -89,4 +89,7 @@ html {
 
     // Search-bar
     --search-bar-bg-color: #fff;
+
+    // Review card
+    --review-card-bg-color: #fafafd;
 }
