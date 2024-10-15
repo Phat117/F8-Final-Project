@@ -133,6 +133,10 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 *,
 ::before,
 ::after {
@@ -2693,14 +2697,30 @@ html.dark {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   border-radius: 16px;
   background: var(--review-card-bg-color);
+  height: 100%;
 }
 .review-card__content {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__content {
+    flex-direction: row;
+    text-align: initial;
+  }
 }
 .review-card__avatar {
   width: 80px;
@@ -2722,10 +2742,20 @@ html.dark {
   line-height: 150%;
 }
 .review-card__rating {
-  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: auto;
+}
+@media (max-width: 1199.98px) {
+  .review-card__rating {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    flex-direction: row;
+  }
 }
 .review-card__rating-title {
   margin-left: 12px;
@@ -2733,6 +2763,11 @@ html.dark {
   font-style: normal;
   font-weight: 500;
   line-height: 144.444%;
+}
+.review-card__star-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .text-content {
@@ -3435,16 +3470,33 @@ html.dark {
   align-items: center;
   margin: 0 -30px;
 }
-.product-tab__link {
+@media (max-width: 767.98px) {
+  .product-tab__list {
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+}
+.product-tab__item {
   padding: 0 30px;
   font-size: 2.2rem;
   font-style: normal;
   font-weight: 500;
   line-height: 145.455%;
+  white-space: nowrap;
   color: #9e9da8;
+  user-select: none;
 }
-.product-tab__link--active {
+.product-tab__item:not(.product-tab__item--active) {
+  cursor: pointer;
+}
+.product-tab__item--active {
   color: inherit;
+}
+@media (max-width: 767.98px) {
+  .product-tab__item {
+    padding: 8px 15px;
+    font-size: 1.8rem;
+  }
 }
 .product-tab__contents {
   padding-top: 30px;

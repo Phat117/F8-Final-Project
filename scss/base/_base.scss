@@ -1,4 +1,8 @@
 @use "../abstract";
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 *,
 ::before,
 ::after {
