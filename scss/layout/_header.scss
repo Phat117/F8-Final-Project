@@ -324,6 +324,12 @@
         border-bottom: 1.5px solid var(--header-act-dropdown-border-color);
     }
 
+    &__separate {
+        margin: 20px 0;
+        height: 1px;
+        background-color: var(--header-act-dropdown-border-color);
+    }
+
     &__list {
         padding-bottom: 10px;
         flex-wrap: nowrap;

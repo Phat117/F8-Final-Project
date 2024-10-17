@@ -1829,6 +1829,11 @@ html.dark {
   border-top: 1.5px solid var(--header-act-dropdown-border-color);
   border-bottom: 1.5px solid var(--header-act-dropdown-border-color);
 }
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  background-color: var(--header-act-dropdown-border-color);
+}
 .act-dropdown__list {
   padding-bottom: 10px;
   flex-wrap: nowrap;
