@@ -1354,6 +1354,7 @@ html {
   --top-act-separate: #ededf6;
   --header-act-dropdown-bg-color: #fff;
   --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --header-act-dropdown-border-color: #d2d1d6;
   /*Dropdown*/
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -1442,8 +1443,9 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-separate: #ededf6;
-  --header-act-dropdown-bg-color: #292e39;
+  --header-act-dropdown-bg-color: #2f3441;
   --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --header-act-dropdown-border-color: #171c28;
   /*Dropdown*/
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
@@ -1725,7 +1727,6 @@ html.dark {
   }
 }
 .top-act__btn {
-  position: relative;
   column-gap: 10px;
   padding: 13px 20px;
   cursor: pointer;
@@ -1756,6 +1757,12 @@ html.dark {
     font-size: 1.6rem !important;
   }
 }
+.top-act__btn-wrap {
+  position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  display: block;
+}
 
 .nav-btn {
   height: 50px;
@@ -1783,11 +1790,15 @@ html.dark {
 
 .act-dropdown {
   position: absolute;
-  top: 65px;
+  top: 48px;
   right: -60px;
+  padding-top: 20px;
   width: min(500px, 100vw);
+  display: none;
+  z-index: 9;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--header-act-dropdown-bg-color);
@@ -1815,8 +1826,8 @@ html.dark {
 .act-dropdown__bottom {
   padding: 20px 0;
   margin: 20px 0;
-  border-top: 1.5px solid #d2d1d6;
-  border-bottom: 1.5px solid #d2d1d6;
+  border-top: 1.5px solid var(--header-act-dropdown-border-color);
+  border-bottom: 1.5px solid var(--header-act-dropdown-border-color);
 }
 .act-dropdown__list {
   padding-bottom: 10px;
@@ -1850,6 +1861,13 @@ html.dark {
 .act-dropdown__checkout-btn {
   min-width: 278px;
 }
+.act-dropdown__arrow {
+  position: absolute;
+  top: -17px;
+  right: 93px;
+  height: 20.5px;
+  filter: var(--dropdown-arrow-color);
+}
 
 .cart-review-item {
   text-align: left;
@@ -1857,7 +1875,7 @@ html.dark {
 .cart-review-item__wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid #ebebeb;
+  border: 1.5px solid var(--header-act-dropdown-border-color);
   border-radius: 10px;
 }
 .cart-review-item__thumb {
