@@ -10,7 +10,7 @@
     padding-bottom: 50px;
 
     &__breadcrumbs {
-        background-color: #fff;
+        background-color: var(--checkout-breadcrumbs-bg-color);
     }
 }
 
@@ -24,8 +24,8 @@
 
 .cart-info {
     border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    background: var(--checkout-cart-info-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
     padding: 30px;
 
     @include abstract.breakpoint(md) {
@@ -63,7 +63,7 @@
     &__seperate {
         margin: 30px 0;
         height: 1px;
-        background-color: #d2d1d6;
+        background-color: var(--checkout-border-color);
     }
 
     &__continue {
@@ -108,11 +108,11 @@
     gap: 30px;
 
     padding: 30px 0;
-    border-bottom: 1px solid #d2d1d6;
+    border-bottom: 1px solid var(--checkout-border-color);
 
     @include abstract.breakpoint(md) {
         padding: 16px 0;
-
+        gap: 16px;
         &:last-child {
             border: none;
             padding-bottom: 0;
@@ -173,6 +173,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: 144.444%;
+
+        color: #9e9da8;
     }
 
     &__status {
@@ -204,7 +206,7 @@
         padding: 0 20px;
 
         border-radius: 10px;
-        border: 1px solid #d2d1d6;
+        border: 1px solid #d2d1d6z;
 
         font-size: 1.5rem;
         font-style: normal;
@@ -221,6 +223,7 @@
         text-align: right;
 
         @include abstract.breakpoint(md) {
+            margin-bottom: 16px;
             text-align: left;
         }
     }
@@ -258,7 +261,7 @@
 
         border-radius: 14px;
         background: rgb(118, 68, 225, 0.1);
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        box-shadow: 0px 20px 60px 10px var(--checkout-gift-item-shadow);
     }
 
     &__title {
