@@ -1404,6 +1404,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
   --checkout-border-color: #d2d1d6;
   --checkout-gift-item-shadow: rgba(237, 237, 246, 0.2);
+  --dialog-bg-color: #fff;
+  --dialog-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1507,6 +1509,8 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
   --checkout-border-color: #292e39;
   --checkout-gift-item-shadow: rgba(23, 28, 40, 0.2);
+  --dialog-bg-color: #2f3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2305,13 +2309,17 @@ html.dark {
   background-color: #f8f8fb;
   font-size: 1.8rem;
   font-weight: 500;
+  white-space: nowrap;
   -webkit-user-select: none;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
-  color: #9e9da8;
   background-color: transparent;
   font-weight: 400;
 }
@@ -2991,6 +2999,64 @@ html.dark {
   height: 1.5px;
   margin: 40px 0;
   background-color: var(--text-content-hr-bg-color);
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dialog__content {
+  position: relative;
+  z-index: 2;
+  max-width: min(450px, 100% - 40px);
+  background-color: var(--dialog-bg-color);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+@media (max-width: 767.98px) {
+  .dialog__content {
+    padding: 16px;
+  }
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  .dialog__bottom {
+    gap: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .dialog__btn {
+    flex: 1;
+  }
 }
 
 .home {
@@ -3861,7 +3927,7 @@ html.dark {
   height: 44px;
   padding: 0 20px;
   border-radius: 10px;
-  border: 1px solid #d2d1d6z;
+  border: 1px solid #d2d1d6;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
