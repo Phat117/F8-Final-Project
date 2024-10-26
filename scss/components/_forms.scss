@@ -10,6 +10,15 @@ $error-color: #ed4337;
     &__row {
         display: flex;
         gap: 30px;
+
+        @include abstract.breakpoint(md) {
+            gap: 20px;
+        }
+        @include abstract.breakpoint(sm) {
+            flex-direction: column;
+            gap: 0;
+        }
+
         > * {
             flex: 1;
         }
@@ -90,6 +99,7 @@ $error-color: #ed4337;
 
     &__input,
     &__text-area-input {
+        width: 100%;
         font-size: 1.8rem;
         font-style: normal;
         font-weight: 500;

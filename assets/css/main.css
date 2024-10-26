@@ -183,8 +183,17 @@ select {
   border: none;
 }
 
-input {
+input,
+textarea {
   background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 999999s;
+  -webkit-text-fill-color: #fff;
 }
 
 .icon {
@@ -2590,6 +2599,17 @@ html.dark {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__row {
+    gap: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .form__row > * {
   flex: 1;
 }
@@ -2652,6 +2672,7 @@ html.dark {
   }
 }
 .form__input, .form__text-area-input {
+  width: 100%;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 500;
@@ -3066,22 +3087,23 @@ html.dark {
   line-height: 141.66%;
 }
 .modal__body {
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 180px);
   overflow-y: auto;
   padding-right: 20px;
 }
 .modal__content {
+  --content-width: 540px;
   position: relative;
   z-index: 2;
   width: min(var(--content-width), 100% - 40px);
   background-color: var(--dialog-bg-color);
-  padding: 30px;
+  padding: 30px 10px 30px 30px;
   border-radius: 20px;
   box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
 }
 @media (max-width: 767.98px) {
   .modal__content {
-    padding: 16px;
+    padding: 20px 0 20px 20px;
   }
 }
 .modal--small .modal__content {
@@ -3101,6 +3123,7 @@ html.dark {
 }
 .modal__bottom {
   margin-top: 30px;
+  padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3110,6 +3133,11 @@ html.dark {
 @media (max-width: 767.98px) {
   .modal__bottom {
     gap: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal__bottom {
+    margin-top: 20px;
   }
 }
 @media (max-width: 767.98px) {
