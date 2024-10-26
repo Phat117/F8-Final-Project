@@ -67,6 +67,9 @@ html.dark {
 
     //form
     --form-placeholder-color: #b9babe;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg-color: #2f3441;
+    --form-select-dialog-option-hover: #292e39;
 
     // auth
     --auth-content-bg-color: #292e39;

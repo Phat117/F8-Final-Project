@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -515,6 +515,7 @@
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
+
                                 <img
                                     src="./assets/icons/form-error.svg"
                                     alt="message"
@@ -522,9 +523,15 @@
                                 />
 
                                 <div id="city-dialog" class="form__select-dialog">
+                                    <button
+                                        class="form__close-dialog d-none d-sm-block js-toggle"
+                                        toggle-target="#city-dialog"
+                                    >
+                                        &times;
+                                    </button>
                                     <div class="form__search">
                                         <input type="text" class="form__search-input" placeholder="Search" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon" />
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
                                     </div>
                                     <ul class="form__option-list">
                                         <li class="form__option">An Giang</li>

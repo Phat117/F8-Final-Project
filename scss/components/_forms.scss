@@ -87,6 +87,7 @@ $error-color: #ed4337;
 
     &__text-input {
         position: relative;
+
         height: 50px;
 
         &--small {
@@ -133,6 +134,7 @@ $error-color: #ed4337;
         flex-direction: column;
 
         position: absolute;
+        z-index: 1;
         min-width: 240px;
         max-height: 310px;
 
@@ -145,8 +147,9 @@ $error-color: #ed4337;
 
         bottom: 44px;
         left: 10px;
-        background-color: #fff;
-        padding: 10px 0;
+        background-color: var(--form-select-dialog-bg-color);
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+        padding-bottom: 10px;
         border: 1.5px solid #d2d1d6;
         border-radius: 10px;
 
@@ -155,42 +158,84 @@ $error-color: #ed4337;
             visibility: visible;
             translate: 0;
         }
-    }
 
+        @include abstract.breakpoint(sm) {
+            position: fixed;
+            inset: 0;
+            max-width: initial;
+            max-height: initial;
+            border-radius: 0;
+        }
+    }
+    &__close-dialog {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        font-size: 3rem;
+
+        padding: 2px 10px;
+        opacity: 0.8;
+    }
     &__search {
         display: flex;
         align-items: center;
+        flex-shrink: 0;
+
         border-bottom: 1.5px solid #d2d1d6;
-        padding: 0 20px 10px;
+
+        height: 38px;
+        padding: 0 20px;
         margin-bottom: 10px;
         &-input {
             flex: 1;
+            height: 100%;
+
+            font-size: 1.6rem;
+            @include abstract.breakpoint(sm) {
+                position: absolute;
+            }
         }
 
         &-icon {
+            margin-left: 10px;
             width: 16px;
+            @include abstract.breakpoint(sm) {
+                margin-left: 0;
+            }
+        }
+
+        @include abstract.breakpoint(lg) {
+            height: 42px;
+        }
+
+        @include abstract.breakpoint(sm) {
+            margin-top: 35px;
+            flex-direction: row-reverse;
         }
     }
 
     &__option {
-        padding: 8px 20px 8px 20px;
+        padding: 8px 20px;
         font-size: 1.4rem;
 
         &:not(&--current):hover {
-            background-color: #ebebeb;
+            background-color: var(--form-select-dialog-option-hover);
             cursor: pointer;
         }
         &--current {
             font-weight: 500;
             background-color: rgba($color: #ffb700, $alpha: 0.5);
         }
-
-        &-list {
-            flex: 1;
-            overflow-y: auto;
+        @include abstract.breakpoint(lg) {
+            padding: 14px 20px;
         }
     }
-
+    &__option-list {
+        flex: 1;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
     &__error {
         display: none;
         text-align: left;
