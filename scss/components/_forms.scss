@@ -7,6 +7,14 @@ $error-color: #ed4337;
         opacity: 0.5;
         pointer-events: none; // deo cho bam
     }
+    &__row {
+        display: flex;
+        gap: 30px;
+        > * {
+            flex: 1;
+        }
+    }
+
     &__group {
         margin-top: 30px;
         &--inline {
@@ -37,36 +45,66 @@ $error-color: #ed4337;
         }
     }
 
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
-
-        height: 50px;
         padding: 0 12px;
 
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
 
+        &-small {
+            padding: 0 12px;
+            border-radius: 8px;
+        }
+
         &:focus-within {
             border-color: #77dae6;
+        }
+    }
+
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            height: 100%;
+
+            resize: none;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+
+        &--small {
+            height: 42px;
         }
 
         @include abstract.breakpoint(md) {
             height: 48px;
         }
     }
-    &__input {
-        flex: 1;
-        height: 100%;
 
+    &__input,
+    &__text-area-input {
         font-size: 1.8rem;
         font-style: normal;
         font-weight: 500;
         line-height: 144.444%;
-
         &::placeholder {
             color: var(--form-placeholder-color);
         }
+        @include abstract.breakpoint(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        height: 100%;
 
         &-icon {
             margin-left: 12px;
@@ -76,10 +114,6 @@ $error-color: #ed4337;
                 width: 5%;
                 animation: shake 0.8s;
             }
-        }
-
-        @include abstract.breakpoint(md) {
-            font-size: 1.6rem;
         }
     }
 
