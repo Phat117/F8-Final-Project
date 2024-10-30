@@ -2349,6 +2349,10 @@ html.dark {
 .btn--rounded {
   border-radius: 999px;
 }
+.btn---danger {
+  color: #fff;
+  background-color: #ed4337;
+}
 .btn[disabled], .btn--disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -2741,6 +2745,12 @@ html.dark {
     border-radius: 0;
   }
 }
+.form__dialog-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px;
+}
 .form__close-dialog {
   position: absolute;
   right: 0;
@@ -2765,7 +2775,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .form__search-input {
-    position: absolute;
+    margin-left: 10px;
   }
 }
 .form__search-icon {
@@ -2784,8 +2794,11 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .form__search {
-    margin-top: 35px;
+    padding: 0 15px;
     flex-direction: row-reverse;
+    border: 1.5px solid #d2d1d6;
+    margin: 10px;
+    border-radius: 10px;
   }
 }
 .form__option {
@@ -3233,7 +3246,7 @@ html.dark {
   line-height: 1.5;
 }
 .modal__bottom {
-  margin-top: 30px;
+  margin-top: 50px;
   padding-right: 20px;
   display: flex;
   align-items: center;
@@ -3248,7 +3261,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .modal__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 767.98px) {

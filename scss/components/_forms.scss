@@ -167,6 +167,12 @@ $error-color: #ed4337;
             border-radius: 0;
         }
     }
+    &__dialog-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 14px;
+    }
     &__close-dialog {
         position: absolute;
         right: 0;
@@ -193,7 +199,7 @@ $error-color: #ed4337;
 
             font-size: 1.6rem;
             @include abstract.breakpoint(sm) {
-                position: absolute;
+                margin-left: 10px;
             }
         }
 
@@ -210,8 +216,11 @@ $error-color: #ed4337;
         }
 
         @include abstract.breakpoint(sm) {
-            margin-top: 35px;
+            padding: 0 15px;
             flex-direction: row-reverse;
+            border: 1.5px solid #d2d1d6;
+            margin: 10px;
+            border-radius: 10px;
         }
     }
 

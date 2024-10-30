@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -385,7 +385,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded"
+                                <a href="./payment.html" class="cart-info__next-btn btn btn--primary btn--rounded"
                                     >Continue to checkout
                                 </a>
                             </div>
@@ -420,7 +420,7 @@
         <div id="delete-confirm" class="modal modal--small">
             <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
             <div class="modal__content">
-                <div class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <p class="modal__text">Do you want to delete this item from the list</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
@@ -440,9 +440,9 @@
         <div id="add-new-address" class="modal modal--medium show">
             <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
             <div class="modal__content">
-                <h2 class="modal__heading">Add new shipping address</h2>
-                <div class="modal__body">
-                    <form action="" class="form" autocomplete="off">
+                <form action="" class="form" autocomplete="off">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="name" class="form__label form__label--small">Name</label>
@@ -521,8 +521,9 @@
                                     alt="message"
                                     class="form__input-icon--error"
                                 />
-
-                                <div id="city-dialog" class="form__select-dialog">
+                                <!-- Select dialog -->
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
                                     <button
                                         class="form__close-dialog d-none d-sm-block js-toggle"
                                         toggle-target="#city-dialog"
@@ -608,19 +609,19 @@
                                 <label for="check" class="form__checkbox-label">Set as default address</label>
                             </label>
                         </div>
-                    </form>
-                </div>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
-                        Cancel
-                    </button>
-                    <button
-                        class="btn btn--small btn--no-margin btn--primary modal__btn js-toggle"
-                        toggle-target="#add-new-address"
-                    >
-                        Create
-                    </button>
-                </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button
+                            class="btn btn--small btn--no-margin btn--primary modal__btn js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="modal__overlay"></div>
         </div>
