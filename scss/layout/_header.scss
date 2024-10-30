@@ -5,6 +5,8 @@
 }
 
 .header {
+    position: relative;
+    z-index: 1000;
     background: var(--header-bg-color);
     @include abstract.breakpoint(lg) {
         box-shadow: 0px 20px 60px 10px var(--header-shadow-color);

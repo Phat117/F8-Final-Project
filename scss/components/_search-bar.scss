@@ -1,3 +1,4 @@
+@use "../abstract";
 .search-bar {
     display: flex;
     align-items: center;
@@ -20,6 +21,9 @@
         ::placeholder {
             color: #9e9da8;
             font-weight: 400;
+        }
+        @include abstract.breakpoint(md) {
+            font-size: 1.6rem;
         }
     }
 
