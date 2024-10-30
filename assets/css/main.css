@@ -1858,8 +1858,8 @@ html.dark {
 .act-dropdown__bottom {
   padding: 20px 0;
   margin: 20px 0;
-  border-top: 1.5px solid var(--header-act-dropdown-border-color);
-  border-bottom: 1.5px solid var(--header-act-dropdown-border-color);
+  border-top: 1px solid var(--header-act-dropdown-border-color);
+  border-bottom: 1px solid var(--header-act-dropdown-border-color);
 }
 .act-dropdown__separate {
   margin: 20px 0;
@@ -1912,7 +1912,7 @@ html.dark {
 .cart-review-item__wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid var(--header-act-dropdown-border-color);
+  border: 1px solid var(--header-act-dropdown-border-color);
   border-radius: 10px;
 }
 .cart-review-item__thumb {
@@ -2655,7 +2655,7 @@ html.dark {
   align-items: center;
   padding: 0 12px;
   border-radius: 10px;
-  border: 1.5px solid #d2d1d6;
+  border: 1px solid #d2d1d6;
 }
 .form__text-area--small, .form__text-input--small {
   padding: 0 12px;
@@ -2730,7 +2730,7 @@ html.dark {
   background-color: var(--form-select-dialog-bg-color);
   box-shadow: 0 0 5px var(--form-select-dialog-shadow);
   padding-bottom: 10px;
-  border: 1.5px solid #d2d1d6;
+  border: 1px solid #d2d1d6;
   border-radius: 10px;
 }
 .form__select-dialog.show {
@@ -2765,7 +2765,7 @@ html.dark {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  border-bottom: 1.5px solid #d2d1d6;
+  border-bottom: 1px solid #d2d1d6;
   height: 38px;
   padding: 0 20px;
   margin-bottom: 10px;
@@ -2803,7 +2803,7 @@ html.dark {
   .form__search {
     padding: 0 30px;
     flex-direction: row-reverse;
-    border: 1.5px solid #d2d1d6;
+    border: 1px solid #d2d1d6;
     margin: 10px;
     border-radius: 10px;
   }
@@ -2876,7 +2876,7 @@ html.dark {
   width: 18.5px;
   height: 18.5px;
   border-radius: 6px;
-  border: 1.5px solid #9e9da8;
+  border: 1px solid #9e9da8;
 }
 @media (max-width: 767.98px) {
   .form__checkbox-label {
@@ -2973,7 +2973,7 @@ html.dark {
 }
 .message--success {
   background: rgba(17, 255, 108, 0.3);
-  border: 1.5px solid #46a05c;
+  border: 1px solid #46a05c;
 }
 
 .breadcrumbs {
@@ -3185,7 +3185,7 @@ html.dark {
 }
 .text-content hr {
   border: none;
-  height: 1.5px;
+  height: 1px;
   margin: 40px 0;
   background-color: var(--text-content-hr-bg-color);
 }
@@ -3750,7 +3750,7 @@ html.dark {
   width: 65px;
   height: 65px;
   object-fit: contain;
-  border: 1.5px solid #b9babe;
+  border: 1px solid #b9babe;
   border-radius: 10px;
   opacity: 0.5;
 }
@@ -3993,6 +3993,11 @@ html.dark {
     padding: 16px;
   }
 }
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-info__list {
   margin-top: -30px;
 }
@@ -4063,12 +4068,41 @@ html.dark {
     line-height: 150%;
   }
 }
+.cart-info__heading--lv2 {
+  font-size: 2/2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145.455%;
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 144.444%;
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+}
+.cart-info__checkbox {
+  position: relative;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url("../icons/checkbox-unchecked.svg");
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
 }
 
 .cart-info + .cart-info {
@@ -4326,28 +4360,61 @@ html.dark {
   align-items: flex-end;
   gap: 10px;
 }
-.address-card__ctrl-btn {
+
+.payment-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f6f6f6;
+}
+.payment-item--pointer {
+  cursor: pointer;
+}
+.payment-item__content {
+  flex: 1;
+}
+.payment-item__title {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
   line-height: 144.444%;
 }
-.address-card__checkbox {
-  position: relative;
+.payment-item__desc {
+  margin-top: 4px;
 }
-.address-card__checkbox-input {
-  appearance: none;
+.payment-item__desc, .payment-item__detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
 }
-.address-card__checkbox-input::before {
-  content: url("../icons/checkbox-unchecked.svg");
+.payment-item__detail {
+  padding: 10px 0 10px 10px;
+  color: #0071dc;
 }
-.address-card__checkbox-input:not(:checked)::before {
-  filter: var(--icon-color);
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
-.address-card__checkbox-input:checked::before {
-  content: url("../icons/checkbox-checked.svg");
+.payment-item__checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 14px;
+}
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: inherit;
+}
+.payment-item__cost {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: #9e9da8;
 }
 
 /*# sourceMappingURL=main.css.map */

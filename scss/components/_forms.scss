@@ -61,7 +61,7 @@ $error-color: #ed4337;
         padding: 0 12px;
 
         border-radius: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
 
         &--small {
             padding: 0 12px;
@@ -150,7 +150,7 @@ $error-color: #ed4337;
         background-color: var(--form-select-dialog-bg-color);
         box-shadow: 0 0 5px var(--form-select-dialog-shadow);
         padding-bottom: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
         border-radius: 10px;
 
         &.show {
@@ -188,7 +188,7 @@ $error-color: #ed4337;
         align-items: center;
         flex-shrink: 0;
 
-        border-bottom: 1.5px solid #d2d1d6;
+        border-bottom: 1px solid #d2d1d6;
 
         height: 38px;
         padding: 0 20px;
@@ -222,7 +222,7 @@ $error-color: #ed4337;
         @include abstract.breakpoint(sm) {
             padding: 0 30px;
             flex-direction: row-reverse;
-            border: 1.5px solid #d2d1d6;
+            border: 1px solid #d2d1d6;
             margin: 10px;
             border-radius: 10px;
         }
@@ -298,7 +298,7 @@ $error-color: #ed4337;
                 width: 18.5px;
                 height: 18.5px;
                 border-radius: 6px;
-                border: 1.5px solid #9e9da8;
+                border: 1px solid #9e9da8;
             }
 
             @include abstract.breakpoint(md) {

@@ -98,12 +98,12 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <label class="address-card__checkbox">
+                                                    <label class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
+                                                            type="radio"
+                                                            name="shipping-address"
                                                             id=""
-                                                            class="address-card__checkbox-input"
+                                                            class="cart-info__checkbox-input"
                                                             placeholder="!"
                                                             checked
                                                         />
@@ -123,7 +123,7 @@
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
                                                     <button
-                                                        class="address-card__ctrl-btn js-toggle"
+                                                        class="cart-info__edit-btn js-toggle"
                                                         toggle-target="#add-new-address"
                                                     >
                                                         <img src="./assets/icons/edit.svg" alt="" class="icon" />
@@ -137,12 +137,12 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <label class="address-card__checkbox">
+                                                    <label class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
+                                                            type="radio"
+                                                            name="shipping-address"
                                                             id=""
-                                                            class="address-card__checkbox-input"
+                                                            class="cart-info__checkbox-input"
                                                             placeholder="!"
                                                         />
                                                     </label>
@@ -162,7 +162,7 @@
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
                                                     <button
-                                                        class="address-card__ctrl-btn js-toggle"
+                                                        class="cart-info__edit-btn js-toggle"
                                                         toggle-target="#add-new-address"
                                                     >
                                                         <img src="./assets/icons/edit.svg" alt="" class="icon" />
@@ -437,7 +437,7 @@
         </div>
 
         <!-- Modal: add new shopping address -->
-        <div id="add-new-address" class="modal modal--medium show">
+        <div id="add-new-address" class="modal modal--medium hide">
             <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
             <div class="modal__content">
                 <form action="" class="form" autocomplete="off">
