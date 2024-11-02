@@ -2903,6 +2903,12 @@ html.dark {
   font-weight: 500;
   line-height: 145.455%;
 }
+.form__label--medium {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .form__label--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -4104,6 +4110,15 @@ html.dark {
 .cart-info__checkbox-input:checked::before {
   content: url("../icons/checkbox-checked.svg");
 }
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.cart-info__form {
+  margin-bottom: 30px;
+}
 
 .cart-info + .cart-info {
   margin-top: 30px;
@@ -4391,7 +4406,8 @@ html.dark {
   line-height: 146.667%;
 }
 .payment-item__detail {
-  padding: 10px 0 10px 10px;
+  margin-right: -8px;
+  padding: 10px;
   color: #0071dc;
 }
 .payment-item__thumb {
