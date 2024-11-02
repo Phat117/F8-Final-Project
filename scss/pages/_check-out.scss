@@ -36,6 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 30px;
     }
 
     &__list {
@@ -118,10 +119,15 @@
         }
 
         &--lv2 {
-            font-size: 2/2rem;
+            font-size: 2.2rem;
             font-style: normal;
             font-weight: 500;
             line-height: 145.455%;
+
+            @include abstract.breakpoint(sm) {
+                font-size: 1.8rem;
+                line-height: 150%;
+            }
         }
     }
     &__sub-heading {
@@ -461,14 +467,30 @@
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: var(--payment-item-bg-color);
+    @include abstract.breakpoint(sm) {
+        align-items: flex-start;
+    }
+
     &--pointer {
         cursor: pointer;
     }
     &__content {
         flex: 1;
-    }
 
+        &--row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include abstract.breakpoint(sm) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    &__info {
+        flex: 1;
+    }
     &__title {
         font-size: 1.8rem;
         font-style: normal;
