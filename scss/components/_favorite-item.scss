@@ -1,11 +1,14 @@
+@use "../abstract";
 .favorite-item {
     display: flex;
     align-items: center;
     gap: 20px;
     &__thumb {
-        width: 151px;
-        height: 108px;
-        object-fit: contain;
+        width: 110px;
+
+        @include abstract.breakpoint(lg) {
+            width: 80px;
+        }
     }
 
     &__title {
@@ -20,6 +23,11 @@
         gap: 20px;
 
         margin-top: 10px;
+
+        @include abstract.breakpoint(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__price {

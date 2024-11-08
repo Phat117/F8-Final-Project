@@ -4,7 +4,7 @@
     gap: 10px;
 
     border-radius: 10px;
-    background: #f6f6f6;
+    background: var(--account-info-bg-color);
     padding: 10px;
 
     &__icon {
@@ -12,9 +12,11 @@
         align-items: center;
         justify-content: center;
 
+        flex-shrink: 0;
+
         padding: 15px;
         border-radius: 8px;
-        background-color: #fff;
+        background-color: var(--account-info-icon-color);
     }
 
     &__title {

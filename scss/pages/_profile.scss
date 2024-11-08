@@ -5,8 +5,8 @@
 
     &__sidebar {
         border-radius: 20px;
-        background: #fff;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        background: var(--profile-sidebar-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
         overflow: hidden;
         padding-bottom: 30px;
     }
@@ -25,7 +25,7 @@
     background-size: cover;
 
     padding: 40px 20px 20px;
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    box-shadow: 0px 20px 60px 10px var(--profile-user-shadow);
 
     &__avatar {
         width: 121px;
@@ -85,7 +85,7 @@
 
         transition: background-color 0.2s;
         &:hover {
-            background-color: #ebebeb;
+            background-color: var(--profile-sidebar-link-hover);
         }
     }
     &__icon {
