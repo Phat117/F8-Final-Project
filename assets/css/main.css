@@ -2670,7 +2670,7 @@ html.dark {
   display: block;
 }
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__input-icon {
-  isplay: none;
+  display: none;
 }
 .form__text-area, .form__text-input {
   display: flex;
@@ -4260,7 +4260,15 @@ html.dark {
 .cart-info__next-btn {
   margin-top: 30px;
 }
+.cart-info__back-arrow {
+  position: relative;
+  top: 4px;
+  width: 40px;
+  padding-right: 10px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
@@ -4771,6 +4779,25 @@ html.dark {
   justify-content: center;
   width: 24px;
   height: 100%;
+}
+
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.form-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 30px;
+}
+.form-card__btn-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=main.css.map */
